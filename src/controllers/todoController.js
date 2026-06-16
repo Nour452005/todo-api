@@ -19,8 +19,8 @@ const getAllTodos = async (req, res) => { //wait for the query to finish before 
         res.status(200).json(result.rows); //send the data back as JSON with a 200 status
 
     } catch (error) {
-        //if something breaks, send back the error message with a 500 status
-        res.status(500).json({ message: error.message});
+        console.error('getAllTodos error:', error.message);
+        res.status(500).json({ message: error.message });
     }
 }
 

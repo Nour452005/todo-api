@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="container">
+        <h1>My Todos</h1>
+
+        <div class="counter">
+    <span id="pendingCount">0</span> todos remaining
+</div>
+
+<div class="filters">
+    <button class="filter-btn active" onclick="setFilter('all')">All</button>
+    <button class="filter-btn" onclick="setFilter('active')">Active</button>
+    <button class="filter-btn" onclick="setFilter('completed')">Completed</button>
+</div>
+
+
+        <div class="form-card">
+            <input type="text" id="titleInput" placeholder="What needs to be done?"/>
+            <textarea id="descInput" placeholder="Description (optional)"></textarea>
+            <button id="addBtn">Add Todo</button>
+        </div>
+
+
+        <div id="todoList"></div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

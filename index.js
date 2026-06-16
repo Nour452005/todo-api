@@ -13,6 +13,10 @@ const app = express();
 //tell Express to automatically parse incoming JSON from request bodies
 app.use(express.json());
 
+//Tell Express to serve any files in the public folder as static files
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
 //import route files created next
 const todoRoutes = require('./src/routes/todoRoutes');
 
