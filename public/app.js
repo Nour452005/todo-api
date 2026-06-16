@@ -1,5 +1,4 @@
-const API_URL = 'http://localhost:3000/todos';
-let currentFilter = 'all';
+const API_URL = window.location.origin + '/todos';let currentFilter = 'all';
 // fetch and display all todos
 async function loadTodos() {
     const res = await fetch(API_URL);
